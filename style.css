@@ -1,0 +1,917 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+
+
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+  
+    "nav"
+    "Header"
+    "Main"
+    "footer";
+    
+    background-image: url("bg.jpg");
+}
+
+nav{
+    width: max-content;
+    justify-self: center;
+
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 10%;
+}
+
+.navbar  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: .5em 1em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.662);
+    padding: .2em;
+    
+}
+
+
+header *{
+    background-color: rgb(0, 0, 0);
+}
+
+.cover{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: space-between;
+    height: 50vh;
+    width: 90vw;
+    margin: 1rem auto;
+    border: 0.2em solid rgb(0, 0, 0);
+    position: relative;   
+}
+
+
+
+.cover > h1{
+    font-size: 1rem;
+    border-left: 0.3rem solid rgb(190, 0, 0);
+    border-top: 0.3rem solid  rgba(37, 69, 100, 0.998);
+    padding: 0.1rem;
+    position: absolute;
+    top:20%;
+    left:5%;
+    color: white;
+
+}
+
+.cover > p{
+
+    position: relative;
+    top: 45%;
+    left: 30%;
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.5rem;
+    color: rgb(44, 103, 170);
+    width: max-content;
+    height: max-content;
+}
+  
+
+.cover > p::before, p::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+.cover > p::before{
+
+    background-color: rgb(0, 0, 0);
+    animation: Type 10s steps(37) 1s forwards;
+
+}
+
+.cover > p::after{
+
+    background-color: rgb(215, 215, 215);
+    width: 3px;
+    animation: 
+    Type 10s steps(37) 1s  forwards,
+    cursorblink 750ms steps(37) infinite;
+
+
+}
+
+@keyframes Type {
+    to {
+        left:100%;
+    }
+    
+}
+
+@keyframes cursorblink {
+    to {
+        background: transparent;
+    }
+    
+}
+
+.cover > #like{
+    position: absolute;
+    top:5%;
+    right: 1%;
+    width: 30px; 
+    height: 30px;
+    color: rgba(255, 255, 255, 0.443);
+    font-size: 1em;
+
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px; 
+    flex-wrap: wrap;   
+
+}
+
+
+.profile  div{
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
+    padding: 1em;
+    height: 15em;
+    width: 15em;
+
+}
+
+.profile  h2{
+
+    display: inline;
+    font-size: 1em;
+    border-bottom: 1em solid rgb(58, 58, 58);
+    padding-bottom: 0.2em;
+    border-width: 0.1em;
+
+}
+
+.profile  h3{
+
+    display: inline-block;
+    font-size: 1em;
+    font-family: monospace;
+    color: rgb(0, 0, 0);
+    margin-top: 1em;
+    
+}
+
+.profile h5 {
+    text-align: center;
+    color: rgba(10, 10, 10, 0.986);
+    padding: 0.5em;
+    font-size: 1rem;
+}
+
+
+.profile img{
+    display: block;
+    margin: 1em auto 0 auto;
+    width: 5em;
+    height: auto;
+
+}
+
+#flipeffect{
+position: relative;
+background-color: transparent;
+box-shadow: 0px 0px;
+
+}
+
+.content{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    backface-visibility: hidden;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+    background-color: transparent;
+    border: none;
+  
+}
+
+
+.card1{
+    position: absolute;
+    top:0;
+    left:0;  
+    background-color: rgba(255, 255, 255, 0.300); 
+}
+
+.card2{
+    position: absolute;
+    top:0;
+    left:0;
+    backface-visibility: hidden;
+    transform:rotateY(180deg);
+    transform-style: preserve-3d;
+    background-color: rgba(255, 255, 255, 0.300);
+
+}
+
+.card2 > p{
+    color: rgb(0, 0, 0);
+    font-size: 1.2em; 
+    font-weight: 500;
+    font-style:normal;
+    text-align: justify;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+#flipeffect:hover .content{
+    transform:rotateY(180deg);
+    
+}
+
+#flipeffect:hover h5{
+    visibility: hidden;
+}
+
+
+.Developer{
+    background-color: rgba(255, 255, 255, 0.313); 
+    transition: height 2s, width 2s, background-color 0.01s linear 0s;
+}
+
+
+
+.Developer > p{
+    visibility: hidden;
+}
+
+.Developer:hover {
+        height: 20em;
+        width: 20em;
+        background-color:rgba(255, 255, 255, 0.313);
+        color: rgb(0, 0, 0);
+        overflow: hidden;
+}
+
+.Developer:hover > *{
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.Developer:hover > p{
+    font-size: 1.2em; 
+    visibility: visible;
+    color: rgb(0, 0, 0);   
+}
+
+.Developer:hover h5{
+    visibility: hidden;
+}
+
+.Analyst{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.313); 
+    
+}
+#card3 > p{
+
+    visibility: hidden;
+    position: absolute;
+    font-size: xx-small;
+    color: transparent;
+}
+
+#card3{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    transition: height 4s, width 3s, background-color 3s, color 4s linear 0s;
+    box-shadow: none;
+}
+.Analyst:hover  #card3 > p{
+
+    visibility: visible;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    font-style: normal;
+    font-size: 1.2em; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:justify;
+    padding: 0.2em;
+}
+
+.Analyst:hover h5{
+    visibility: hidden;
+}
+
+.Analyst:hover #card3{
+    height: 15em;
+    width: 15em;
+    background-color: rgb(21, 96, 170);
+    box-shadow: none;
+    margin: auto;
+    padding: 0.2rem;
+    overflow: hidden;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    padding: 4.5rem;
+    background: black;
+}
+
+.contact > *{
+    background: black;
+    color: white;
+}
+
+.contact div{
+    align-items: center;
+    margin: auto;
+   
+}
+
+.contact h3{
+    font-size: 1em;
+    margin: 0.2em;
+}
+
+.insta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Media Query */
+
+@media only screen and (max-width: 900px) {
+
+    .cover {
+
+    }
+    .cover > p {
+        font-size: 1rem ;
+    }
+
+    .cover > h1 {
+        font-size: 1rem ;
+    }
+
+    .cover > #like{
+        font-size: .8em;
+    }
+
+    .navbar{
+        font-size: 1em;
+    }
+    
+    
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-items: center;
+        margin-top: 70px;
+        margin-bottom: 70px; 
+
+    }
+
+    .profile > div{
+        margin: 3rem;
+        align-self:center;
+    }
+
+    .profile  div{
+        box-shadow: 10px 10px;
+        padding: 1em;
+        height: 11em;
+        width: 11em;
+    
+    }
+
+    .profile h2{
+        font-size: .9em;
+    }
+    .profile h3{
+        font-size: .6em;
+    }
+
+    .profile img{
+        font-size: .7em;
+    }
+    .profile h5{
+        font-size: .75em;
+    }
+
+
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+
+    }
+    .contact  div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 0.5rem;
+        margin: 20px;
+        text-align: center;        
+    } 
+
+    .contact  div *{
+        align-self: center ;
+        font-size: 1.2em;
+        margin: auto;
+
+    }
+
+    .contact h3{
+        font-size: 1.2em;
+        margin: 0.2em;
+    }
+
+    #flipeffect:hover .content{
+        transform:rotateY(180deg);
+    }
+    
+    #flipeffect:hover h5{
+        visibility: hidden;
+    }
+
+    .Developer:hover {
+        height: 20em;
+        width: 20em;
+        background-color: rgb(21, 96, 170);
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    
+}
+
+    .Developer:hover > *{
+        background-color: rgb(21, 96, 170);
+        color: rgb(255, 255, 255);
+    }
+
+    .Developer:hover > p{
+        font-size: 1.2em; 
+        visibility: visible;
+        color: rgb(255, 255, 255);   
+    }
+
+    .Developer:hover h5{
+        visibility: hidden;
+    }
+
+    .Analyst:hover  #card3 > p{
+
+        visibility: visible;
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        font-style: normal;
+        font-size: 1.2em; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align:justify;
+        padding: 0.2em;
+    }
+    
+    .Analyst:hover h5{
+        visibility: hidden;
+    }
+    
+    .Analyst:hover #card3{
+        height: 15em;
+        width: 15em;
+        background-color: rgb(21, 96, 170);
+        box-shadow: none;
+        margin: auto;
+        padding: 0.2rem;
+        overflow: hidden;
+    }
+    
+
+    }
+
+    @media only screen and (max-width: 750px) {
+
+        .cover {
+    
+        }
+        .cover > p {
+            font-size: .75rem ;
+        }
+    
+        .cover > .hp {
+            font-size: .75rem ;
+        }
+
+        .cover > #like{
+            font-size: .7em;
+        }
+        
+        .profile {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px; 
+    
+    
+        }
+    
+        .profile > div{
+            margin: 3rem;
+            align-self:center;
+        }
+
+        .profile  div{
+            box-shadow: 10px 10px;
+            padding: 1em;
+            height: 9em;
+            width: 9em;
+        
+        }
+    
+        .profile h2{
+            font-size: .7em;
+        }
+        .profile h3{
+            font-size: .5em;
+        }
+    
+        .profile img{
+            font-size: .6em;
+        }
+        .profile h5{
+            font-size: .5em;
+        }
+    
+    
+        .contact{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+    
+        }
+        .contact  div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 0.5rem;
+            margin: 20px;
+            text-align: center;
+    
+        } 
+    
+        .contact  div *{
+            align-self: center ;
+            margin: auto;
+        }
+
+        .contact h3{
+            font-size: 0.9em;
+            margin: 0.2em;
+        }
+
+        #flipeffect:hover .content{
+            transform:rotateY(180deg);
+        }
+        
+        #flipeffect:hover h5{
+            visibility: hidden;
+        }
+    
+        .Developer:hover {
+            height: 20em;
+            width: 20em;
+            background-color: rgb(21, 96, 170);
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+        
+    }
+    
+        .Developer:hover > *{
+            background-color: rgb(21, 96, 170);
+            color: rgb(255, 255, 255);
+        }
+    
+        .Developer:hover > p{
+            font-size: 1.2em; 
+            visibility: visible;
+            color: rgb(255, 255, 255);   
+        }
+    
+        .Developer:hover h5{
+            visibility: hidden;
+        }
+    
+        .Analyst:hover  #card3 > p{
+    
+            visibility: visible;
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            font-style: normal;
+            font-size: 1.2em; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align:justify;
+            padding: 0.2em;
+        }
+        
+        .Analyst:hover h5{
+            visibility: hidden;
+        }
+        
+        .Analyst:hover #card3{
+            height: 15em;
+            width: 15em;
+            background-color: rgb(21, 96, 170);
+            box-shadow: none;
+            margin: auto;
+            padding: 0.2rem;
+            overflow: hidden;
+        }
+     
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            .cover {
+                height: 30vh;
+                width: 90vw;
+            }
+            .cover > p {
+                font-size: .6rem ;
+                position: relative;
+                top: 45%;
+                left: 25%;
+            }
+        
+            .cover > .hp {
+                font-size: .5rem ;
+                font-weight: bolder;
+            }
+
+            .cover > #like{
+                font-size: .5em;
+            }
+            
+            .profile {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                justify-items: center;
+                margin-top: 25px;
+                margin-bottom: 25px; 
+        
+        
+            }
+        
+            .profile > div{
+                margin: 3rem;
+                align-self:center;
+            }
+        
+            .contact{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+        
+            }
+            .contact  div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                font-size: 0.5rem;
+                margin: 20px;
+                text-align: center;        
+            } 
+        
+            .contact  div *{
+                align-self: center ;
+                margin: auto;
+
+            }
+
+            .contact h3{
+                font-size: 0.8em;
+                margin: 0.2em;
+            }
+
+            #flipeffect:hover .content{
+                transform:rotateY(180deg);
+            }
+            
+            #flipeffect:hover h5{
+                visibility: hidden;
+            }
+        
+            .Developer:hover {
+                height: 20em;
+                width: 20em;
+                background-color: rgb(21, 96, 170);
+                color: rgb(255, 255, 255);
+                overflow: hidden;
+            
+        }
+        
+            .Developer:hover > *{
+                background-color: rgb(21, 96, 170);
+                color: rgb(255, 255, 255);
+            }
+        
+            .Developer:hover > p{
+                font-size: 1.2em; 
+                visibility: visible;
+                color: rgb(255, 255, 255);   
+            }
+        
+            .Developer:hover h5{
+                visibility: hidden;
+            }
+        
+            .Analyst:hover  #card3 > p{
+        
+                visibility: visible;
+                color: rgb(255, 255, 255);
+                background-color: transparent;
+                font-style: normal;
+                font-size: 1.2em; 
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align:justify;
+                padding: 0.2em;
+            }
+            
+            .Analyst:hover h5{
+                visibility: hidden;
+            }
+            
+            .Analyst:hover #card3{
+                height: 15em;
+                width: 15em;
+                background-color: rgb(21, 96, 170);
+                box-shadow: none;
+                margin: auto;
+                padding: 0.2rem;
+                overflow: hidden;
+            }
+         
+            }
+
+            @media only screen and (max-width: 330px) {
+
+                .cover {
+
+                    max-height: 30vh;
+                    width: 90vw
+                }
+
+                .cover > p {
+                    font-size: .4rem ;
+                    position: relative;
+                    top: 45%;
+                    left: 25%;
+                }
+            
+                .cover > .hp {
+                    font-size: .3rem ;
+                    font-weight: bolder;
+                }
+                
+                .profile {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    justify-items: center;
+            
+                }
+            
+                .profile > div{
+                    margin: 3rem;
+                    align-self:center;
+                }
+            
+                .contact{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 20px;
+            
+                }
+                .contact  div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    font-size: 0.5rem;
+                    margin: 20px;
+                    text-align: center;
+            
+                } 
+            
+                .contact  div *{
+                    align-self: center ;
+                    margin: auto;
+                }
+                .contact h3{
+                    font-size: .7em;
+                    margin: 0.2em;
+                }
+
+                #flipeffect:hover .content{
+                    transform:rotateY(180deg);
+                }
+                
+                #flipeffect:hover h5{
+                    visibility: hidden;
+                }
+            
+                .Developer:hover {
+                    height: 20em;
+                    width: 20em;
+                    background-color: rgb(21, 96, 170);
+                    color: rgb(255, 255, 255);
+                    overflow: hidden;
+                
+            }
+            
+                .Developer:hover > *{
+                    background-color: rgb(21, 96, 170);
+                    color: rgb(255, 255, 255);
+                }
+            
+                .Developer:hover > p{
+                    font-size: 1.2em; 
+                    visibility: visible;
+                    color: rgb(255, 255, 255);   
+                }
+            
+                .Developer:hover h5{
+                    visibility: hidden;
+                }
+            
+                .Analyst:hover  #card3 > p{
+            
+                    visibility: visible;
+                    color: rgb(255, 255, 255);
+                    background-color: transparent;
+                    font-style: normal;
+                    font-size: 1.2em; 
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    text-align:justify;
+                    padding: 0.2em;
+                }
+                
+                .Analyst:hover h5{
+                    visibility: hidden;
+                }
+                
+                .Analyst:hover #card3{
+                    height: 15em;
+                    width: 15em;
+                    background-color: rgb(21, 96, 170);
+                    box-shadow: none;
+                    margin: auto;
+                    padding: 0.2rem;
+                    overflow: hidden;
+                }
+             
+                }
