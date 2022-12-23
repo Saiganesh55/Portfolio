@@ -18,6 +18,8 @@ body{
     "footer";
     
     background-image: url("Bg.jpg");
+    background-size: cover;
+
 }
 
 nav{
