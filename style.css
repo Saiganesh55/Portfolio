@@ -247,7 +247,10 @@ box-shadow: 0px 0px;
 
 #flipeffect:hover .content{
     transform:rotateY(180deg);
-    
+}
+
+#flipeffect:hover .card2{
+    background-color: rgb(21, 96, 170);
 }
 
 #flipeffect:hover h5{
@@ -274,9 +277,9 @@ box-shadow: 0px 0px;
         overflow: hidden;
 }
 
-.Developer:hover > *{
-    background-color: transparent;
-    color: rgb(0, 0, 0);
+.Developer:hover {
+    background-color: rgb(21, 96, 170);
+    color: rgb(255, 255, 255);
 }
 
 .Developer:hover > p{
