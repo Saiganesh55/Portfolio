@@ -574,8 +574,8 @@ color: rgb(255, 255, 255);
         .profile div{
             box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
             padding: 1em;
-            height: 9em;
-            width: 9em;
+            height: 9.5em;
+            width: 9.5em;
         
         }
     
@@ -633,8 +633,8 @@ color: rgb(255, 255, 255);
         }
     
         .Developer:hover {
-            height: 11em;
-            width: 11em;
+            height: 11.5em;
+            width: 11.5em;
             background-color: rgb(21, 96, 170);
             color: rgb(255, 255, 255);
             overflow: hidden;
@@ -675,8 +675,8 @@ color: rgb(255, 255, 255);
         }
         
         .Analyst:hover #card3{
-            height: 9em;
-            width: 9em;
+            height: 9.5em;
+            width: 9.5em;
             background-color: rgb(21, 96, 170);
             box-shadow: none;
             margin: auto;
@@ -731,8 +731,8 @@ color: rgb(255, 255, 255);
             .profile div{
                 box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
                 padding: 1em;
-                height: 9em;
-                width: 9em;
+                height: 9.5em;
+                width: 9.5em;
             }
 
             .card2 > p{
@@ -774,8 +774,8 @@ color: rgb(255, 255, 255);
             }
         
             .Developer:hover {
-                height: 10em;
-                width: 10em;
+                height: 11.5em;
+                width: 11.5em;
                 background-color: rgb(21, 96, 170);
                 color: rgb(255, 255, 255);
                 overflow: hidden;
@@ -815,8 +815,8 @@ color: rgb(255, 255, 255);
             }
             
             .Analyst:hover #card3{
-                height: 9em;
-                width: 9em;
+                height: 9.5em;
+                width: 9.5em;
                 background-color: rgb(21, 96, 170);
                 box-shadow: none;
                 margin: auto;
@@ -871,8 +871,8 @@ color: rgb(255, 255, 255);
                 .profile div{
                     box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
                     padding: 1em;
-                    height: 9em;
-                    width: 9em;
+                    height: 9.5em;
+                    width: 9.5em;
                 }
                 
                 .card2 > p{
@@ -913,8 +913,8 @@ color: rgb(255, 255, 255);
                 }
             
                 .Developer:hover {
-                    height: 10em;
-                    width: 10em;
+                    height: 11.5em;
+                    width: 11.5em;
                     background-color: rgb(21, 96, 170);
                     color: rgb(255, 255, 255);
                     overflow: hidden;
@@ -954,8 +954,8 @@ color: rgb(255, 255, 255);
                 }
                 
                 .Analyst:hover #card3{
-                    height: 9em;
-                    width: 9em;
+                    height: 9.5em;
+                    width: 9.5em;
                     background-color: rgb(21, 96, 170);
                     box-shadow: none;
                     margin: auto;
