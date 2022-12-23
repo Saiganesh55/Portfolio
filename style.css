@@ -8,6 +8,7 @@ html {
     scroll-behavior:smooth;
   }
 
+  
 body{
     display: grid;
     grid-template-areas:
@@ -19,7 +20,6 @@ body{
     
     background-image: url("Bg.jpg");
     background-size: cover;
-
 }
 
 nav{
@@ -47,6 +47,7 @@ nav{
 
 header *{
     background-color: rgb(0, 0, 0);
+    
 }
 
 .cover{
@@ -57,7 +58,7 @@ header *{
     height: 50vh;
     width: 90vw;
     margin: 1rem auto;
-    border: 0.2em solid rgb(0, 0, 0);
+    border: 0.2em solid rgba(255, 255, 255, 0.103);
     position: relative;   
 }
 
@@ -88,7 +89,7 @@ header *{
 }
   
 
-.cover > p::before, p::after{
+.cover > p::before, .cover > p::after{
     content: "";
     position: absolute;
     top: 0;
@@ -97,6 +98,7 @@ header *{
     right: 0;
     
 }
+
 
 .cover > p::before{
 
@@ -138,7 +140,6 @@ header *{
     height: 30px;
     color: rgba(255, 255, 255, 0.443);
     font-size: 1em;
-
 }
 
 
@@ -260,12 +261,10 @@ box-shadow: 0px 0px;
     visibility: hidden;
 }
 
-
 .Developer{
     background-color: rgba(255, 255, 255, 0.313); 
     transition: height 2s, width 2s, background-color 0.01s linear 0s;
 }
-
 
 
 .Developer > p{
@@ -288,7 +287,11 @@ box-shadow: 0px 0px;
 .Developer:hover > p{
     font-size: 1.2em; 
     visibility: visible;
-    color: rgb(0, 0, 0);   
+    color: rgb(255, 255, 255);
+}
+
+.Developer:hover h3{
+color: rgb(255, 255, 255);
 }
 
 .Developer:hover h5{
@@ -366,7 +369,7 @@ box-shadow: 0px 0px;
 
 .contact h3{
     font-size: 1em;
-    margin: 0.2em;
+    margin: 1em;
 }
 
 .insta{
@@ -374,6 +377,7 @@ box-shadow: 0px 0px;
     flex-direction: column;
     align-items: center;
 }
+
 
 .collab{
     display: flex;
@@ -392,15 +396,15 @@ box-shadow: 0px 0px;
 
 @media only screen and (max-width: 900px) {
 
-    .cover {
 
-    }
     .cover > p {
         font-size: 1rem ;
     }
 
     .cover > h1 {
         font-size: 1rem ;
+        border-left: 0.2rem solid rgb(190, 0, 0);
+        border-top: 0.2rem solid  rgba(37, 69, 100, 0.998);
     }
 
     .cover > #like{
@@ -411,24 +415,13 @@ box-shadow: 0px 0px;
         font-size: 1em;
     }
     
-    
-    .profile {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        justify-items: center;
-        margin-top: 70px;
-        margin-bottom: 70px; 
-
-    }
-
     .profile > div{
-        margin: 3rem;
+        margin: 2rem;
         align-self:center;
     }
 
-    .profile  div{
-        box-shadow: 10px 10px;
+    .profile div{
+        box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
         padding: 1em;
         height: 11em;
         width: 11em;
@@ -447,6 +440,10 @@ box-shadow: 0px 0px;
     }
     .profile h5{
         font-size: .75em;
+    }
+
+    .card2 > p{
+        font-size: 0.8em; 
     }
 
 
@@ -474,7 +471,7 @@ box-shadow: 0px 0px;
 
     .contact h3{
         font-size: 1.2em;
-        margin: 0.2em;
+        margin: 1.5em;
     }
 
     #flipeffect:hover .content{
@@ -486,8 +483,8 @@ box-shadow: 0px 0px;
     }
 
     .Developer:hover {
-        height: 20em;
-        width: 20em;
+        height: 12em;
+        width: 12em;
         background-color: rgb(21, 96, 170);
         color: rgb(255, 255, 255);
         overflow: hidden;
@@ -500,14 +497,17 @@ box-shadow: 0px 0px;
     }
 
     .Developer:hover > p{
-        font-size: 1.2em; 
+        font-size: 0.65em; 
         visibility: visible;
         color: rgb(255, 255, 255);   
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .Developer:hover h5{
         visibility: hidden;
     }
+
+    
 
     .Analyst:hover  #card3 > p{
 
@@ -515,7 +515,7 @@ box-shadow: 0px 0px;
         color: rgb(255, 255, 255);
         background-color: transparent;
         font-style: normal;
-        font-size: 1.2em; 
+        font-size: 0.8em; 
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align:justify;
         padding: 0.2em;
@@ -526,8 +526,8 @@ box-shadow: 0px 0px;
     }
     
     .Analyst:hover #card3{
-        height: 15em;
-        width: 15em;
+        height: 11em;
+        width: 11em;
         background-color: rgb(21, 96, 170);
         box-shadow: none;
         margin: auto;
@@ -540,20 +540,22 @@ box-shadow: 0px 0px;
 
     @media only screen and (max-width: 750px) {
 
-        .cover {
-    
-        }
         .cover > p {
             font-size: .75rem ;
         }
     
         .cover > .hp {
             font-size: .75rem ;
+            border-left: 0.2rem solid rgb(190, 0, 0);
+            border-top: 0.2rem solid  rgba(37, 69, 100, 0.998);
         }
-
+    
         .cover > #like{
+            width: 25px; 
+            height: 25px;
             font-size: .7em;
         }
+    
         
         .profile {
             display: flex;
@@ -562,17 +564,15 @@ box-shadow: 0px 0px;
             justify-items: center;
             margin-top: 50px;
             margin-bottom: 50px; 
-    
-    
         }
     
         .profile > div{
-            margin: 3rem;
+            margin: 2.7rem;
             align-self:center;
         }
 
-        .profile  div{
-            box-shadow: 10px 10px;
+        .profile div{
+            box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
             padding: 1em;
             height: 9em;
             width: 9em;
@@ -591,6 +591,10 @@ box-shadow: 0px 0px;
         }
         .profile h5{
             font-size: .5em;
+        }
+    
+        .card2 > p{
+            font-size: 0.7em; 
         }
     
     
@@ -617,7 +621,7 @@ box-shadow: 0px 0px;
 
         .contact h3{
             font-size: 0.9em;
-            margin: 0.2em;
+            margin: 1.5em;
         }
 
         #flipeffect:hover .content{
@@ -629,22 +633,23 @@ box-shadow: 0px 0px;
         }
     
         .Developer:hover {
-            height: 20em;
-            width: 20em;
+            height: 11em;
+            width: 11em;
             background-color: rgb(21, 96, 170);
             color: rgb(255, 255, 255);
             overflow: hidden;
         
     }
-    
+
         .Developer:hover > *{
             background-color: rgb(21, 96, 170);
             color: rgb(255, 255, 255);
         }
     
         .Developer:hover > p{
-            font-size: 1.2em; 
+            font-size: 0.65em; 
             visibility: visible;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             color: rgb(255, 255, 255);   
         }
     
@@ -658,10 +663,11 @@ box-shadow: 0px 0px;
             color: rgb(255, 255, 255);
             background-color: transparent;
             font-style: normal;
-            font-size: 1.2em; 
+            font-size: 0.65em; 
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             text-align:justify;
             padding: 0.2em;
+        
         }
         
         .Analyst:hover h5{
@@ -669,8 +675,8 @@ box-shadow: 0px 0px;
         }
         
         .Analyst:hover #card3{
-            height: 15em;
-            width: 15em;
+            height: 9em;
+            width: 9em;
             background-color: rgb(21, 96, 170);
             box-shadow: none;
             margin: auto;
@@ -689,16 +695,20 @@ box-shadow: 0px 0px;
             .cover > p {
                 font-size: .6rem ;
                 position: relative;
-                top: 45%;
-                left: 25%;
+                top: 50%;
+                left: 30%;
             }
         
             .cover > .hp {
                 font-size: .5rem ;
-                font-weight: bolder;
+                border-left: 0.125rem solid rgb(190, 0, 0);
+                border-top: 0.125rem solid  rgba(37, 69, 100, 0.998);
+                
             }
 
             .cover > #like{
+                width: 15px; 
+                height: 15px;
                 font-size: .5em;
             }
             
@@ -714,8 +724,19 @@ box-shadow: 0px 0px;
             }
         
             .profile > div{
-                margin: 3rem;
+                margin: 2.5rem;
                 align-self:center;
+            }
+            
+            .profile div{
+                box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
+                padding: 1em;
+                height: 9em;
+                width: 9em;
+            }
+
+            .card2 > p{
+                font-size: 0.6em; 
             }
         
             .contact{
@@ -741,7 +762,7 @@ box-shadow: 0px 0px;
 
             .contact h3{
                 font-size: 0.8em;
-                margin: 0.2em;
+                margin: 1.5em;
             }
 
             #flipeffect:hover .content{
@@ -753,13 +774,13 @@ box-shadow: 0px 0px;
             }
         
             .Developer:hover {
-                height: 20em;
-                width: 20em;
+                height: 10em;
+                width: 10em;
                 background-color: rgb(21, 96, 170);
                 color: rgb(255, 255, 255);
                 overflow: hidden;
             
-        }
+            }
         
             .Developer:hover > *{
                 background-color: rgb(21, 96, 170);
@@ -767,7 +788,8 @@ box-shadow: 0px 0px;
             }
         
             .Developer:hover > p{
-                font-size: 1.2em; 
+                font-size: .4em; 
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 visibility: visible;
                 color: rgb(255, 255, 255);   
             }
@@ -782,7 +804,7 @@ box-shadow: 0px 0px;
                 color: rgb(255, 255, 255);
                 background-color: transparent;
                 font-style: normal;
-                font-size: 1.2em; 
+                font-size: 0.65em; 
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 text-align:justify;
                 padding: 0.2em;
@@ -793,8 +815,8 @@ box-shadow: 0px 0px;
             }
             
             .Analyst:hover #card3{
-                height: 15em;
-                width: 15em;
+                height: 9em;
+                width: 9em;
                 background-color: rgb(21, 96, 170);
                 box-shadow: none;
                 margin: auto;
@@ -813,16 +835,25 @@ box-shadow: 0px 0px;
                 }
 
                 .cover > p {
-                    font-size: .4rem ;
+                    font-size: .3rem ;
                     position: relative;
-                    top: 45%;
-                    left: 25%;
+                    top: 50%;
+                    left: 30%;
                 }
             
                 .cover > .hp {
-                    font-size: .3rem ;
-                    font-weight: bolder;
+                    font-size: .4rem ;
+                    border-left: 0.100rem solid rgb(190, 0, 0);
+                    border-top: 0.100rem solid  rgba(37, 69, 100, 0.998);
+                    
                 }
+    
+                .cover > #like{
+                    width: 15px; 
+                    height: 15px;
+                    font-size: .4em;
+                }
+                
                 
                 .profile {
                     display: flex;
@@ -833,10 +864,21 @@ box-shadow: 0px 0px;
                 }
             
                 .profile > div{
-                    margin: 3rem;
+                    margin: 2rem;
                     align-self:center;
                 }
-            
+
+                .profile div{
+                    box-shadow: 10px 10px rgba(255, 255, 255, 0.103);
+                    padding: 1em;
+                    height: 9em;
+                    width: 9em;
+                }
+                
+                .card2 > p{
+                    font-size: 0.5em; 
+                }
+
                 .contact{
                     display: grid;
                     grid-template-columns: 1fr;
@@ -859,7 +901,7 @@ box-shadow: 0px 0px;
                 }
                 .contact h3{
                     font-size: .7em;
-                    margin: 0.2em;
+                    margin: 1.5em;
                 }
 
                 #flipeffect:hover .content{
@@ -871,8 +913,8 @@ box-shadow: 0px 0px;
                 }
             
                 .Developer:hover {
-                    height: 20em;
-                    width: 20em;
+                    height: 10em;
+                    width: 10em;
                     background-color: rgb(21, 96, 170);
                     color: rgb(255, 255, 255);
                     overflow: hidden;
@@ -885,9 +927,10 @@ box-shadow: 0px 0px;
                 }
             
                 .Developer:hover > p{
-                    font-size: 1.2em; 
+                    font-size: 0.4em; 
                     visibility: visible;
                     color: rgb(255, 255, 255);   
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 }
             
                 .Developer:hover h5{
@@ -900,7 +943,7 @@ box-shadow: 0px 0px;
                     color: rgb(255, 255, 255);
                     background-color: transparent;
                     font-style: normal;
-                    font-size: 1.2em; 
+                    font-size: 0.65em; 
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     text-align:justify;
                     padding: 0.2em;
@@ -911,8 +954,8 @@ box-shadow: 0px 0px;
                 }
                 
                 .Analyst:hover #card3{
-                    height: 15em;
-                    width: 15em;
+                    height: 9em;
+                    width: 9em;
                     background-color: rgb(21, 96, 170);
                     box-shadow: none;
                     margin: auto;
