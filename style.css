@@ -396,20 +396,37 @@ header * {
 
 /* My Works Page */
 
+
+.resume{
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    margin-right: 1rem;
+
+}
+
+.resume > a{
+    list-style: none;
+    color: rgb(255, 255, 255);
+    text-decoration:underline;
+    font-size: 1rem;
+    }
+
 .backtohome{
-position: fixed;
-top: 20px;
-right: 30px;
+position: absolute;
+top: 1rem;
+right: 2rem;
 }
 
 .backtohome > a{
     list-style: none;
     color: rgb(255, 255, 255);
     text-decoration:underline;
+    font-size: 1rem;
     }
 
 .wrapper{
-    margin: 10%;
+    margin: 15%;
     padding: 0px;
 }
 
@@ -423,11 +440,11 @@ right: 30px;
 
 .works div img {
     display: flex;
-    margin: 20px auto;
+    margin: 1em auto;
     object-fit: cover;
     max-width: 30%;
     height: max-content;
-    border: 5px solid rgb(225, 17, 17);
+    border: 0.3em solid rgb(225, 17, 17);
     box-shadow: 1cm, 2cm;
 }
 .works div a {
@@ -587,6 +604,59 @@ right: 30px;
         overflow: hidden;
     }
 
+    .resume{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        margin-right: 0.8rem;
+    
+    }
+    
+    .resume > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.7rem;
+        }
+    
+    .backtohome{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    }
+    
+    .backtohome > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.8rem;
+        }
+    
+    .wrapper{
+        margin: 15%;
+        padding: 0px;
+    }
+    
+    .works{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 10%;
+        align-content: center;    
+    }
+    
+    .works div img {
+        display: flex;
+        margin: 1em auto;
+        object-fit: cover;
+        max-width: 30%;
+        height: max-content;
+        border: 0.3em solid rgb(225, 17, 17);
+    }
+
+    .works div h4{
+        font-size: 0.9rem;
+    }
 
 }
 
@@ -739,6 +809,61 @@ right: 30px;
         overflow: hidden;
     }
 
+    .resume{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        margin-right: 0.8rem;
+    
+    }
+    
+    .resume > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.7rem;
+        }
+    
+    .backtohome{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    }
+    
+    .backtohome > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.8rem;
+        }
+    
+    .wrapper{
+        margin: 18%;
+        padding: 0px;
+    }
+    
+    .works{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 10%;
+        align-content: center;    
+    }
+    
+    .works div img {
+        display: flex;
+        margin: 1em auto;
+        object-fit: cover;
+        max-width: 30%;
+        height: max-content;
+        border: 0.2em solid rgb(225, 17, 17);
+    }
+
+    .works div h4{
+        font-size: 0.7rem;
+    }
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -881,6 +1006,61 @@ right: 30px;
         overflow: hidden;
     }
 
+    .resume{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        margin-right: 0.8rem;
+    
+    }
+    
+    .resume > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.68rem;
+        }
+    
+    .backtohome{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    }
+    
+    .backtohome > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.68rem;
+        }
+    
+    .wrapper{
+        margin: 20%;
+        padding: 0px;
+    }
+    
+    .works{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 10%;
+        align-content: center;    
+    }
+    
+    .works div img {
+        display: flex;
+        margin: 1em auto;
+        object-fit: cover;
+        max-width: 30%;
+        height: max-content;
+        border: 0.125em solid rgb(225, 17, 17);
+    }
+
+    .works div h4{
+        font-size: 0.45rem;
+    }
+
+
 }
 
 @media only screen and (max-width: 330px) {
@@ -1020,6 +1200,60 @@ right: 30px;
         margin: auto;
         padding: 0.2rem;
         overflow: hidden;
+    }
+
+    .resume{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        margin-right: 0.5rem;
+    
+    }
+
+    .resume > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.3rem;
+        }
+    
+    .backtohome{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    }
+    
+    .backtohome > a{
+        list-style: none;
+        color: rgb(255, 255, 255);
+        text-decoration:underline;
+        font-size: 0.3rem;
+        }
+    
+    .wrapper{
+        margin: 25%;
+        padding: 0px;
+    }
+    
+    .works{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 10%;
+        align-content: center;    
+    }
+    
+    .works div img {
+        display: flex;
+        margin: 1em auto;
+        object-fit: cover;
+        max-width: 32%;
+        height: max-content;
+        border: 0.1em solid rgb(225, 17, 17);
+    }
+
+    .works div h4{
+        font-size: 0.2rem;
     }
 
 }
